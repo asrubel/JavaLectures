@@ -5,14 +5,22 @@ import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
-        /*List<String> myList = List.of("Python", "Java", "C#");
+        tryForEach();
+
+        tryIterators();
+
+        tryMaps();
+    }
+
+    public static void tryForEach() {
+        List<String> myList = List.of("Python", "Java", "C#");
         for (String element : myList) {
             System.out.println(element);
         }
 
-        myList.forEach(System.out::println);*/
+        myList.forEach(System.out::println);
 
-        /*Set<Integer> set = new TreeSet<>();
+        Set<Integer> set = new TreeSet<>();
         set.add(10);
         set.add(5);
         set.add(3);
@@ -29,12 +37,14 @@ public class Main {
             }
         }
 
-        System.out.println(set);*/
+        System.out.println(set);
+    }
 
-        /*List<Integer> list = List.of(1, 2, 3, 4);
-        ListIterator<Integer> iterator = list.listIterator();*/
+    public static void tryIterators() {
+        List<Integer> list = List.of(1, 2, 3, 4);
+        ListIterator<Integer> iterator = list.listIterator();
 
-        /*while (iterator.hasNext()) {
+        while (iterator.hasNext()) {
             System.out.println(iterator.next());
         }
 
@@ -42,10 +52,11 @@ public class Main {
             int previousIndex = iterator.previousIndex();
             int previousElement = iterator.previous();
             System.out.println(previousElement + " on " + previousIndex);
-        }*/
+        }
+    }
 
-        /*Map<String, Integer> emptyMap = Map.of();
-
+    public static void tryMaps() {
+        Map<String, Integer> emptyMap = Map.of();
         Map<String, Integer> groups = Map.of(
                 "518", 9,
                 "519", 15,
@@ -57,7 +68,7 @@ public class Main {
         System.out.println(groups.get("518"));
         System.out.println(groups.getOrDefault("539", 0));
         System.out.println(groups.keySet());
-        System.out.println(groups.values());*/
+        System.out.println(groups.values());
 
         Map<Integer, String> products = new HashMap<>();
         products.put(1000, "Laptops");
@@ -72,7 +83,6 @@ public class Main {
 
         products.putIfAbsent(3000, "Keyboards");
         System.out.println(products.get(3000));
-
     }
 }
 
